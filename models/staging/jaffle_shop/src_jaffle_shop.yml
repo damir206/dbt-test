@@ -6,6 +6,11 @@ sources:
     schema: jaffle_shop
     tables:
       - name: customers
+        columns:
+          - name: id
+            tests: 
+              - unique
+              - not_null
       - name: orders
         loaded_at_field: _etl_loaded_at
         freshness:
@@ -21,15 +26,16 @@ models:
           - not_null  
   - name: stg_orders
     columns: 
-      - name: orderid
+      - name: order_id
         tests:
           - unique
           - not_null
       - name: status
         tests:
           - accepted_values:
-            values:
-              - shipped
-              - returned
-              - completed
-              - return_pending
+              values:
+                - shipped
+                - returned
+                - completed
+                - return_pending
+                - placed
