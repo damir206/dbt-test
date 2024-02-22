@@ -3,7 +3,7 @@ version: 2
 sources:
   - name: jaffle_shop
     database: aws_fivetran_ws_1
-    schema: jaffle_shop
+    schema: default
     tables:
       - name: customers
         columns:
