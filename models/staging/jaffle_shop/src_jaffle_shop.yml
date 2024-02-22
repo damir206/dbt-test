@@ -2,7 +2,7 @@ version: 2
 
 sources:
   - name: jaffle_shop
-    database: raw
+    database: aws_fivetran_ws_1
     schema: jaffle_shop
     tables:
       - name: customers
