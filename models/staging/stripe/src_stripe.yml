@@ -2,7 +2,7 @@ version: 2
 
 sources:
   - name: stripe
-    database: raw
+    database: aws_fivetran_ws_1
     schema: stripe
     tables:
       - name: payment
