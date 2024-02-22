@@ -3,7 +3,7 @@ with payments as
     select * from {{ source('stripe','payment') }}
 )
 select
-    order_id,
+    orderid,
 	sum(amount) as total_amount
 from payments
 group by 1
