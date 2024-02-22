@@ -3,7 +3,7 @@ version: 2
 sources:
   - name: stripe
     database: aws_fivetran_ws_1
-    schema: stripe
+    schema: default
     tables:
       - name: payment
         loaded_at_field: _etl_batched_at
